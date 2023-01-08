@@ -1,6 +1,78 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Passos de instalação do projeto
+
+1 - nvm use vxx.xx.x 
+2 - npm start
+3 - copiar Roboto font do MUI para public/index.html
+`
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700&display=swap"
+/>
+<style>
+    * {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    }
+</style>
+
+`
+
+4 - instalar icons MUI
+```
+npm install @mui/material @emotion/react @emotion/styled
+
+```
+
+5 - Criar pasta COMPONENTES
+
+
+6 - Criacao de classes no MUI:]
+``
+const ListMenu = styled(List)(({ theme }) => ({
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+}));
+``
+
+
+7 - Dark mode mudanças:
+- header's background 
+- cor botao header
+- 1 section's background
+- footer's background
+
+
+8 - Aprendizados:
+-breakpoints em Material UI
+- o que é sx
+
+` <Grid container spacing={{ xs: 4, sm: 4, md: 0 }}   `
+
+``<CustomGridItem item xs={12} sm={8} md={6}\
+    sx={{ order: {xs: 3, sm: 3, md: 4} }}/>
+``
+
+``sx={theme => ({
+        [theme.breakpoints.down('md')]:{
+            flex: '1',
+            paddingTop: '30px',
+            alignSelf: 'center',
+        },
+        [theme.breakpoints.up('md')]:{
+            flex: '2',
+            alignSelf: 'flex-end',
+        },
+    )} 
+``
+
+- classes com Material UI
+- menu mobile com material ui (Drawer)
+- component slider React JS
+
+
 
 ## Available Scripts
 
