@@ -1,12 +1,12 @@
 # React JS Landing Page Template com Material UI
 
-[Home](./src/assets/Home.png)
+[Home](https://raw.githubusercontent.com/alessandradocouto/landing-page-template-reactjs/master/src/assets/Home.png)
 
 
-[About](./src/assets/About.png)
+[About](https://raw.githubusercontent.com/alessandradocouto/landing-page-template-reactjs/master/src/assets/About.png)
 
 
-[Contact](./src/assets/Contact.png)
+[Contact](https://raw.githubusercontent.com/alessandradocouto/landing-page-template-reactjs/master/src/assets/Contact.png)
 
 
 
