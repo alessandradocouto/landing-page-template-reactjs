@@ -26,9 +26,9 @@ no seu navegador favorito
 
 ## Índice
 
-- [Sobre](https://github.com/alessandradocouto/app-controle-de-produtos-reactjs#sobre)
-- [O que aprendi](https://github.com/alessandradocouto/app-controle-de-produtos-reactjs#o-que-aprendi-dart)
-- [Dependências](https://github.com/alessandradocouto/app-controle-de-produtos-reactjs#dependências)
+- [Sobre](https://github.com/alessandradocouto/landing-page-template-reactjs#sobre)
+- [O que aprendi](https://github.com/alessandradocouto/landing-page-template-reactjs#o-que-aprendi-dart)
+- [Dependências](https://github.com/alessandradocouto/landing-page-template-reactjs#dependências)
 
 
 
