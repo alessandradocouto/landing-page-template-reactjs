@@ -1,77 +1,77 @@
-# Getting Started with Create React App
+# React JS Landing Page Template com Material UI
+
+[Home](./src/assets/Home.png)
+
+
+[About](./src/assets/About.png)
+
+
+[Contact](./src/assets/Contact.png)
+
+
 
 ## Passos de instalação do projeto
 
-1 - nvm use vxx.xx.x 
-2 - npm start
-3 - copiar Roboto font do MUI para public/index.html
-`
-<link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700&display=swap"
-/>
-<style>
-    * {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    }
-</style>
+1 - Clonar o repositorio:
+[https://github.com/cruip/open-react-template.git](https://github.com/cruip/open-react-template.git)
 
-`
+2 - Na pasta do projeto
 
-4 - instalar icons MUI
-```
-npm install @mui/material @emotion/react @emotion/styled
+`npm start`
 
-```
-
-5 - Criar pasta COMPONENTES
+3 - Abra [http://localhost:3000](http://localhost:3000) 
+no seu navegador favorito
 
 
-6 - Criacao de classes no MUI:]
-``
-const ListMenu = styled(List)(({ theme }) => ({
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-}));
-``
+
+## Índice
+
+- [Sobre](https://github.com/alessandradocouto/app-controle-de-produtos-reactjs#sobre)
+- [O que aprendi](https://github.com/alessandradocouto/app-controle-de-produtos-reactjs#o-que-aprendi-dart)
+- [Dependências](https://github.com/alessandradocouto/app-controle-de-produtos-reactjs#dependências)
 
 
-7 - Dark mode mudanças:
-- header's background 
-- cor botao header
-- 1 section's background
-- footer's background
+
+## Sobre
+
+Landing page Tempalte em React JS feita para desenvolvedores/designs que querem criar rapidamente uma landing page profissional para seus projetos open source. 
 
 
-8 - Aprendizados:
--breakpoints em Material UI
-- o que é sx
+## O que aprendi :dart:
 
-` <Grid container spacing={{ xs: 4, sm: 4, md: 0 }}   `
+:heavy_check_mark: React Router no DOM;
 
-``<CustomGridItem item xs={12} sm={8} md={6}\
-    sx={{ order: {xs: 3, sm: 3, md: 4} }}/>
-``
+:heavy_check_mark: Utilizar Breakpoints em Material UI;
 
-``sx={theme => ({
-        [theme.breakpoints.down('md')]:{
-            flex: '1',
-            paddingTop: '30px',
-            alignSelf: 'center',
-        },
-        [theme.breakpoints.up('md')]:{
-            flex: '2',
-            alignSelf: 'flex-end',
-        },
-    )} 
-``
+:heavy_check_mark: Fazer Componentes reutilizáveis em React;
 
-- classes com Material UI
-- menu mobile com material ui (Drawer)
-- component slider React JS
+:heavy_check_mark: Gerenciamento de estado( useState );
 
+:heavy_check_mark: Classes com Material UI
+
+:heavy_check_mark: Uso de Menu mobile com MUI (Drawer)
+
+:heavy_check_mark: Design responsivo e mobile first;
+
+
+## Dependências
+
+- [Material UI v5](https://www.npmjs.com/package/@mui/material) - Coleção de utilidades de CSS para layouts.
+
+` npm install @mui/material @emotion/react @emotion/styled `
+
+
+- [react router v6+]("react-router-dom": "^6.6.1") - Pacote para usar React Router em aplicativos Web.
+
+`npm i react-router-dom`
+
+
+- [react responsive carousel v3.2+](https://www.npmjs.com/package/react-responsive-carousel) - Carousel responsivo e customizável para galeria de iamgens.
+
+`npm i react-responsive-carousel`
+
+
+- [react animation](https://www.npmjs.com) - Animação de Componentes
 
 
 ## Available Scripts
