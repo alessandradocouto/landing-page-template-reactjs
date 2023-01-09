@@ -1,62 +1,227 @@
-# React JS Landing Page Template com Material UI
+# Landing Page Template com React JS e Material UI :dart:
 
-[Home](https://raw.githubusercontent.com/alessandradocouto/landing-page-template-reactjs/master/src/assets/Home.png)
-
-
-[About](https://raw.githubusercontent.com/alessandradocouto/landing-page-template-reactjs/master/src/assets/About.png)
+![link Home do site](https://raw.githubusercontent.com/alessandradocouto/landing-page-template-reactjs/master/src/assets/Home.png)
 
 
-[Contact](https://raw.githubusercontent.com/alessandradocouto/landing-page-template-reactjs/master/src/assets/Contact.png)
+![link About do site](https://raw.githubusercontent.com/alessandradocouto/landing-page-template-reactjs/master/src/assets/About.png)
 
-
-
-## Passos de instalação do projeto
-
-1 - Clonar o repositorio:
-[https://github.com/cruip/open-react-template.git](https://github.com/cruip/open-react-template.git)
-
-2 - Na pasta do projeto
-
-`npm start`
-
-3 - Abra [http://localhost:3000](http://localhost:3000) 
-no seu navegador favorito
+![link Contact do site](https://raw.githubusercontent.com/alessandradocouto/landing-page-template-reactjs/master/src/assets/Contact.png)
 
 
 
 ## Índice
 
-- [Sobre](https://github.com/alessandradocouto/landing-page-template-reactjs#sobre)
-- [O que aprendi](https://github.com/alessandradocouto/landing-page-template-reactjs#o-que-aprendi-dart)
-- [Dependências](https://github.com/alessandradocouto/landing-page-template-reactjs#dependências)
+- [Sobre](https://github.com/alessandradocouto/landing-page-template-reactjs##sobre)
+- [Aprendizados](https://github.com/alessandradocouto/landing-page-template-reactjs##aprendizados)
+- [Dependências](https://github.com/alessandradocouto/landing-page-template-reactjs##dependências)
 
 
 
 ## Sobre
 
-Landing page Tempalte em React JS feita para desenvolvedores/designs que querem criar rapidamente uma landing page profissional para seus projetos open source. 
+Landing page Template em React JS feita para desenvolvedores/designs que querem criar rapidamente uma landing page profissional para seus projetos open source. 
 
 
-## O que aprendi :dart:
+## Aprendizados
 
-:heavy_check_mark: React Router no DOM;
+:heavy_check_mark: React Router v6+ no DOM
 
-:heavy_check_mark: Utilizar Breakpoints em Material UI;
+No App.js
+
+`import {BrowserRouter, Routes, Route} from react-router-dom';`
+ 
+O componente <Navbar /> tem elementos que se repetem em todas as páginas e tem elementos que estão em 'Route', logo fica 
+dentro de 'BrowserRouter'.
+
+```
+<BrowserRouter>
+    <Navbar />
+    <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+    </Routes>
+</BrowserRouter>
+```
+
+
+:file_folder: pages > :page_with_curl: Home.js
+
+```
+const Home = () => {
+  return (
+    <>
+    <Header />
+    <GetStarted />
+    <GetInTouch />
+    </>
+
+  )
+}
+```
+
+
+Dentro do componente **Navbar**:
+
+```
+import { Link } from 'react-router-dom';
+
+const itemList = [
+    {
+      text: "Home",
+      to: "/" 
+    },
+    {
+      text: "About",
+      to: "/about"
+    },
+    {
+        text: "Contact",
+        to: "/contact"
+    }
+];
+
+
+const Navbar = () => {
+    
+    return (
+        <AppBar 
+        component="nav" 
+        position="sticky"
+        sx={{ 
+            backgroundColor: 'orange', 
+        }}
+        elevation={0}
+        >
+            <StyledToolbar>
+                <Typography
+                variant="h6"
+                component="h2"
+
+                >
+                    HBSales
+                </Typography>
+                
+                <ListMenu>
+                    {itemList.map( ( item ) => {
+                        const { text } = item;
+                        return(
+                            <ListItem key={text}>
+                                <ListItemButton component={Link} to={item.to}
+                                sx={{
+                                    color: '#fff',
+                                    "&:hover": {
+                                        backgroundColor: 'transparent',
+                                        color: '#1e2a5a',
+                                    }
+                                }}
+                                >
+                                    <ListItemText primary={text} />
+                                </ListItemButton>
+                            </ListItem>
+                        )
+                    })}
+                </ListMenu>
+            </StyledToolbar>
+        </AppBar>
+    )
+}
+
+export default Navbar;
+```
+
+
+
+:heavy_check_mark: Utilizar sx e breakpoints em Material UI
+
+O que é [sx](https://mui.com/system/getting-started/the-sx-prop/)?
+
+A propriedade sx permite que você trabalhe com um superconjunto de CSS que empacota todas as funções de estilo expostas em @mui/system. Você pode especificar qualquer CSS válido usando este suporte, bem como muitas propriedades com reconhecimento de tema que são exclusivas do MUI System.
+
+
+```
+<Box component='article'>
+    sx={{
+        px: 4,
+    }}
+</Box>
+
+
+<Grid item xs={12} sm={4} md={6}>
+    sx={{
+        order: {xs: 4, sm: 4, md: 3}
+    }}
+</Grid>
+```
+
 
 :heavy_check_mark: Fazer Componentes reutilizáveis em React;
 
-:heavy_check_mark: Gerenciamento de estado( useState );
+Conteúdo do componente Title:
 
-:heavy_check_mark: Classes com Material UI
+```
+import { Typography } from '@mui/material'
+import React from 'react'
+
+const Title = ({ text, textAlign }) => {
+  return (
+    <Typography 
+    variant='h4'
+    component='h3'
+    sx={{ 
+      fontWeight: '700',
+      textAlign: textAlign,
+   }}
+    >
+      {text}
+    </Typography>
+  )
+}
+
+export default Title;
+```
+
+
+:heavy_check_mark: Styled-Components com Material UI
+
+Personlizar o 'Box' 
+
+```
+const ListMenu = styled(List)(({ theme }) => ({
+    display: 'none',
+    [theme.breakpoints.up("sm")] : {
+        display: "flex",
+    },
+}));
+```
+
+
+
+:heavy_check_mark: Design responsivo e mobile first;
+
+[Uso de Grid no Material UI](https://mui.com/material-ui/react-grid/)
+
+```react
+<Grid item xs={12} sm={4} md={6}>
+    <img src={imgDetail} alt="" 
+    style={{
+        width: '100%',
+    }}
+    />
+</Grid>
+```
+
 
 :heavy_check_mark: Uso de Menu mobile com MUI (Drawer)
 
-:heavy_check_mark: Design responsivo e mobile first;
+[Drawer para usod e menu Mobile/Hamburguer](https://mui.com/material-ui/react-drawer/)
+
+
 
 
 ## Dependências
 
-- [Material UI v5](https://www.npmjs.com/package/@mui/material) - Coleção de utilidades de CSS para layouts.
+- [Material UI v5](https://www.npmjs.com/package/@mui/material) - Pacotes de utilidades de CSS para layouts.
 
 ` npm install @mui/material @emotion/react @emotion/styled `
 
@@ -74,69 +239,26 @@ Landing page Tempalte em React JS feita para desenvolvedores/designs que querem 
 - [react animation](https://www.npmjs.com) - Animação de Componentes
 
 
-## Available Scripts
+##  
 
-In the project directory, you can run:
+### Clonar o repositorio:
 
-### `npm start`
+`git clone https://github.com/nome-usuario/nome-projeto.git`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Instalar dependências
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`npm install`
 
-### `npm test`
+### Rodar aplicação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm start`
 
-### `npm run build`
+Abra o link [http://localhost:3000](http://localhost:3000) 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Criar pasta build
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm run build`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Testar aplicação:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`npm test`
