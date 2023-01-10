@@ -11,9 +11,9 @@
 
 ## Índice
 
-- [Sobre](https://github.com/alessandradocouto/landing-page-template-reactjs##sobre)
-- [Aprendizados](https://github.com/alessandradocouto/landing-page-template-reactjs##aprendizados)
-- [Dependências](https://github.com/alessandradocouto/landing-page-template-reactjs##dependências)
+- [Sobre](https://github.com/alessandradocouto/landing-page-template-reactjs#sobre)
+- [Aprendizados](https://github.com/alessandradocouto/landing-page-template-reactjs#aprendizados)
+- [Dependências](https://github.com/alessandradocouto/landing-page-template-reactjs#dependências)
 
 
 
@@ -30,8 +30,7 @@ No App.js
 
 `import {BrowserRouter, Routes, Route} from react-router-dom';`
  
-O componente <Navbar /> tem elementos que se repetem em todas as páginas e tem elementos que estão em 'Route', logo fica 
-dentro de 'BrowserRouter'.
+O componente **Navbar** tem elementos que se repetem em todas as páginas e tem elementos que estão em 'Routes', logo fica dentro de 'BrowserRouter'.
 
 ```
 <BrowserRouter>
@@ -44,8 +43,7 @@ dentro de 'BrowserRouter'.
 </BrowserRouter>
 ```
 
-
-:file_folder: pages > :page_with_curl: Home.js
+Dentro da pasta pages :file_folder: e no arquivo :page_with_curl: Home.js
 
 ```
 const Home = () => {
@@ -132,7 +130,7 @@ export default Navbar;
 
 
 
-:heavy_check_mark: Utilizar sx e breakpoints em Material UI
+:heavy_check_mark: Utilização de sx e breakpoints em Material UI
 
 O que é [sx](https://mui.com/system/getting-started/the-sx-prop/)?
 
@@ -155,7 +153,7 @@ A propriedade sx permite que você trabalhe com um superconjunto de CSS que empa
 ```
 
 
-:heavy_check_mark: Fazer Componentes reutilizáveis em React;
+:heavy_check_mark: Uso de Componentes reutilizáveis em React;
 
 Conteúdo do componente Title:
 
@@ -182,7 +180,7 @@ export default Title;
 ```
 
 
-:heavy_check_mark: Styled-Components com Material UI
+:heavy_check_mark: Utilização de Styled-Components com Material UI
 
 Personlizar o 'Box' 
 
