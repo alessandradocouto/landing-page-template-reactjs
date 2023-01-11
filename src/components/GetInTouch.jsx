@@ -22,7 +22,7 @@ const GetInTouch = () => {
         >
             <Title 
             text={
-                'Cotnact us to buy property'
+                'Contact us to buy property'
                 } 
             textAlign={'center'}
             />
