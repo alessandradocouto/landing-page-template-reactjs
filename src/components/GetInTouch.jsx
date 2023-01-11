@@ -22,14 +22,16 @@ const GetInTouch = () => {
         >
             <Title 
             text={
-                'Interesting to buy property'
+                'Cotnact us to buy property'
                 } 
             textAlign={'center'}
             />
             <Paragraph 
             text={
-                'If you are interested to buy the property contact us we will call you. \
-                Shortly to fulfill you requirements and property.'
+                'It is our commitment to ensure a professional and enjoyable \
+                new home buying experience for you. \
+                If you want to get a home to start living as a family in an \
+                area that you love click the button below.'
             }
             maxWidth = {'sm'}
             mx={0}

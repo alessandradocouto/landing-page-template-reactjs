@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, styled, Typography } from "@mui/material";
+import { Box, Button, Link, styled, Typography } from "@mui/material";
 //img
 // import headerImg from '../assets/pexels-thgusstavo-santana-2102587.jpg'
 import headerImg from '../assets/pexels-binyamin-mellish-186078.png'
@@ -7,7 +7,6 @@ import headerImg from '../assets/pexels-binyamin-mellish-186078.png'
 const Header = () => {
 
     const CustomBox = styled(Box) (({ theme }) => ({
-        //width: '100%',
         minHeight: '80vh',
         display: 'flex',
         justifyContent: 'center',
@@ -20,7 +19,6 @@ const Header = () => {
             flexDirection: 'column',
             alignItems: 'center',
             textAlign: 'center',
-            //minHeight: '60vh',
         }
     }));
 
@@ -90,6 +88,8 @@ const Header = () => {
                         buy now
                     </Button>
                     <Button 
+                    component={Link} 
+                    to={'/about'}
                     variant='outlined'
                     sx={{
                         px: 4, 
@@ -101,11 +101,12 @@ const Header = () => {
                         backgroundColor: 'transparent',
                         borderColor: '#fff',
                         "&&:hover": {
-                            borderColor: 'transparent',
-                            backgroundColor: "#343a55",
+                            color: '#343a55',
+                            borderColor: '#343a55',
                         },
                         "&&:focus": {
-                            backgroundColor: "#14192d"
+                            color: '#343a55',
+                            borderColor: '#343a55',
                         }
                     }}
                     >
