@@ -2,6 +2,7 @@
   "name": "landing-page-reactjs-materialui",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://myusername.github.io/my-app",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
