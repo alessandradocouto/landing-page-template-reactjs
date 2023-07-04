@@ -99,7 +99,7 @@ const Navbar = () => {
                 component="h2"
 
                 >
-                    HBSales
+                    QTS Sales
                 </Typography>
                 
                 <ListMenu>
