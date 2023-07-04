@@ -48,7 +48,7 @@ const Header = () => {
                     color: '#fff',
                 }}
                 >
-                    We'll build house of your dream
+                    Công ty Quang Trung Software xin kính chào quý khách
                 </Typography>
 
                 <Typography
