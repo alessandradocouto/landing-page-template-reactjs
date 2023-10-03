@@ -38,7 +38,7 @@ const itemList = [
       to: "/" 
     },
     {
-      text: "A igreja",
+      text: "Igreja",
       to: "/about"
     },
     {
