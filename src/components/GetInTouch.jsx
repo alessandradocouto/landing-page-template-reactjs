@@ -22,7 +22,7 @@ const GetInTouch = () => {
         >
             <Title 
             text={
-                'Contact us to buy property'
+                'Precisa de ajuda? Ficamos felizes em te ouvir!'
                 } 
             textAlign={'center'}
             />
@@ -39,24 +39,27 @@ const GetInTouch = () => {
             />
             <Button component={Link} 
             to={'/contact'}
-            variant="contained" 
-            type="submit"
-            size="medium"
-            sx= {{ 
-                fontSize: '0.9rem',
-                textTransform: 'capitalize', 
-                py: 2,
-                px: 4,
-                mt: 3, 
-                mb: 2,
-                borderRadius: 0,
-                backgroundColor: '#14192d',
-                "&:hover": {
-                    backgroundColor: '#1e2a5a',
-                }
-            }}
+            variant='outlined'
+                    sx={{
+                        px: 4, 
+                        py: 1,
+                        fontSize:'0.9rem',
+                        textTransform: 'capitalize',
+                        borderRadius: 2,
+                        color: 'gray',
+                        backgroundColor: 'transparent',
+                        borderColor: 'gray',
+                        "&&:hover": {
+                            color: '#343a55',
+                            borderColor: '#343a55',
+                        },
+                        "&&:focus": {
+                            color: '#343a55',
+                            borderColor: '#343a55',
+                        }
+                    }}
             >
-                get in touch
+                Fale conosco
             </Button>
  
         </Stack>
