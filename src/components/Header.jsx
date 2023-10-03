@@ -14,7 +14,7 @@ const Header = () => {
         gap: theme.spacing(2),
         paddingTop: theme.spacing(10),
         // cor de fundo
-        backgroundColor: 'orange',
+        backgroundColor: 'gray',
         [theme.breakpoints.down('md')]: {
             flexDirection: 'column',
             alignItems: 'center',
@@ -48,7 +48,7 @@ const Header = () => {
                     color: '#fff',
                 }}
                 >
-                    We'll build house of your dream
+                    Seja bem-vindo(a) a Igreja da Libertação!
                 </Typography>
 
                 <Typography
@@ -60,20 +60,19 @@ const Header = () => {
                     color: '#fff',
                 }}
                 >
-                    We have 9000 more review and our customers
-                    trust on out property and quality products.
+                    "E conhecereis a verdade, e a verdade vos libertará." - João 8:32
                 </Typography>
 
                 <Box>
                     <Button 
-                    variant='contained'
+                    variant='solid'
                     sx={{
                         mr: 2,
                         px: 4, 
                         py: 1,
                         fontSize: '0.9rem',
                         textTransform: 'capitalize',
-                        borderRadius: 0,
+                        borderRadius: 2,
                         borderColor: '#14192d',
                         color: '#fff',
                         backgroundColor: '#14192d',
@@ -85,7 +84,7 @@ const Header = () => {
                         }
                     }}
                     >
-                        buy now
+                        A Igreja
                     </Button>
                     <Button 
                     component={Link} 
@@ -96,7 +95,7 @@ const Header = () => {
                         py: 1,
                         fontSize:'0.9rem',
                         textTransform: 'capitalize',
-                        borderRadius: 0,
+                        borderRadius: 2,
                         color: '#fff',
                         backgroundColor: 'transparent',
                         borderColor: '#fff',
@@ -110,7 +109,7 @@ const Header = () => {
                         }
                     }}
                     >
-                        explore
+                        Fale conosco
                     </Button>
                 </Box>
             </BoxText>

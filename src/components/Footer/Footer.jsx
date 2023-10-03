@@ -43,34 +43,34 @@ const Footer = () => {
     }}
     >
       <StackColumn>
-        <FooterTitle text={'address'} />
+        <FooterTitle text={'Endereço'} />
         <FooterLink 
-        text={'15th Louis St, london 92382, eng'} 
+        text={'Rua Dr. Alberto Pinto Horta Júnior, 373 - Parque das Árvores'} 
         />
         <FooterLink 
-        text={'25 999-345-10800'} 
+        text={'12506-230'} 
         />
         <FooterLink 
-        text={'info@housesales.com'} 
+        text={'ielguara@gmail.com'} 
         />
       </StackColumn>
       
       <StackColumn>
-        <FooterTitle text={'our services'} />
+        <FooterTitle text={'A Igreja'} />
         <FooterLink text={'buy house'} />
         <FooterLink text={'sell house'} />
         <FooterLink text={'rent house'} />
         <FooterLink text={'build house'} />
       </StackColumn>
       <StackColumn>
-        <FooterTitle text={'our company'} />
+        <FooterTitle text={'Departamentos'} />
         <FooterLink text={'reporting'} />
         <FooterLink text={'get in touch'} />
         <FooterLink text={'management'} />
       </StackColumn>
 
       <StackColumn>
-        <FooterTitle text={'hBSales'} />
+        <FooterTitle text={'Redes sociais'} />
         <Stack 
         direction='row' 
         width= '70px'
@@ -102,7 +102,7 @@ const Footer = () => {
         variant='caption'
         component='p' 
         >
-          &copy; 2022 HBSales Inc.
+          &copy; 2023 Todos os diretos reservados a Igreja da Libertação.
         </Typography>
       </StackColumn>
     </BoxRow>
