@@ -60,7 +60,7 @@ const Header = () => {
                     color: '#fff',
                 }}
                 >
-                    We have 9000 more review and our customers
+                    We have 10000 more review and our customers
                     trust on out property and quality products.
                 </Typography>
 
