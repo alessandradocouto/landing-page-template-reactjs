@@ -63,7 +63,7 @@ const Navbar = () => {
                 component="h2"
 
                 >
-                    HBSales
+                    Qts Sales
                 </Typography>
                 <Box sx={{display: { xs: 'block', sm: 'none' } }}>
                     <DrawerItem /> 
