@@ -70,7 +70,7 @@ const Footer = () => {
       </StackColumn>
 
       <StackColumn>
-        <FooterTitle text={'hBSales'} />
+        <FooterTitle text={'qtsSales'} />
         <Stack 
         direction='row' 
         width= '70px'
@@ -102,7 +102,7 @@ const Footer = () => {
         variant='caption'
         component='p' 
         >
-          &copy; 2022 HBSales Inc.
+          &copy; 2022 QTS Sales Inc.
         </Typography>
       </StackColumn>
     </BoxRow>
